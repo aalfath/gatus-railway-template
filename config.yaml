@@ -1,0 +1,24 @@
+web:
+  address: '[::]'
+  port: ${PORT}
+storage:
+  type: sqlite
+  path: /data/data.db
+ui:
+  title: Status
+  header: Status
+endpoints:
+  - name: Gatus
+    group: self
+    url: 'http://127.0.0.1:${PORT}/health'
+    interval: 1m
+    conditions:
+      - '[STATUS] == 200'
+      - '[BODY].status == UP'
+  - name: Example
+    group: websites
+    url: 'https://example.com'
+    interval: 5m
+    conditions:
+      - '[STATUS] == 200'
+      - '[RESPONSE_TIME] < 2000'
