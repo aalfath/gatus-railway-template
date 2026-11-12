@@ -1,5 +1,7 @@
 # Deploy and Host Gatus on Railway
 
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/new/template/gatus-2?utm_medium=integration&utm_source=button&utm_campaign=gatus)
+
 Gatus is a developer-oriented health dashboard and status page. It checks HTTP, TCP, ICMP, DNS, TLS certificates and more on a schedule, evaluates conditions such as status codes, response times and JSON body values, and sends alerts to Slack, Discord, PagerDuty, Telegram, email and many other channels.
 
 ## About Hosting Gatus
