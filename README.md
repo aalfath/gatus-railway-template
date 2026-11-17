@@ -6,7 +6,7 @@ Gatus is a developer-oriented health dashboard and status page. It checks HTTP, 
 
 ## About Hosting Gatus
 
-This template deploys Gatus v5.37.0 from a small public wrapper image that runs the official binary as a non-root user. The whole configuration lives in the `GATUS_CONFIG` variable, so you can edit monitored endpoints and alerts in the Railway dashboard and redeploy. Gatus expands `${VAR}` references inside the config, which keeps webhook URLs and tokens in their own variables. Results are stored in SQLite on a Railway volume, so uptime history survives redeploys. The status page is public by design. Gatus is tiny and fits the Hobby plan. Alerts can go to Slack, Discord, PagerDuty, email and many other providers.
+This template deploys Gatus v5.38.0 from a small public wrapper image that runs the official binary as a non-root user. The whole configuration lives in the `GATUS_CONFIG` variable, so you can edit monitored endpoints and alerts in the Railway dashboard and redeploy. Gatus expands `${VAR}` references inside the config, which keeps webhook URLs and tokens in their own variables. Results are stored in SQLite on a Railway volume, so uptime history survives redeploys. The status page is public by design. Gatus is tiny and fits the Hobby plan. Alerts can go to Slack, Discord, PagerDuty, email and many other providers.
 
 ## Common Use Cases
 
@@ -16,13 +16,13 @@ This template deploys Gatus v5.37.0 from a small public wrapper image that runs 
 
 ## Dependencies for Gatus Hosting
 
-- `aalfath/gatus-railway-template` (public wrapper around `twinproduction/gatus:v5.37.0`)
+- `aalfath/gatus-railway-template` (public wrapper around `twinproduction/gatus:v5.38.0`)
 - A Railway volume at `/data` for the SQLite history
 
 ### Deployment Dependencies
 
 - [Gatus documentation](https://gatus.io/docs)
-- [Gatus v5.37.0 release](https://github.com/TwiN/gatus/releases/tag/v5.37.0)
+- [Gatus v5.38.0 release](https://github.com/TwiN/gatus/releases/tag/v5.38.0)
 - [Wrapper repository](https://github.com/aalfath/gatus-railway-template)
 - [Railway volumes](https://docs.railway.com/reference/volumes)
 

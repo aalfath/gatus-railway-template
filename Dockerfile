@@ -1,7 +1,7 @@
-# Gatus v5.37.0 with its configuration taken from the GATUS_CONFIG environment variable.
-FROM twinproduction/gatus:v5.37.0@sha256:094eb186e55235db367e90e9d56140e5897b7044c41de23cde4cc18e6da1242e AS gatus
+# Gatus v5.38.0 with its configuration taken from the GATUS_CONFIG environment variable.
+FROM twinproduction/gatus:v5.38.0@sha256:085ed63da963728965d00a3c78aa6167e3bf135218485b893201758e079e8415 AS gatus
 
-FROM alpine:3.24.2@sha256:294b683cb724975bec92580e1e685676bd4b50bda910ddb8c51d4cabeaec77e6
+FROM alpine:3.24.4@sha256:f59abe656b692d901e184be3445e084786602108599d2a51d229c0f5a48c71bf
 RUN apk add --no-cache ca-certificates su-exec tini \
  && adduser -D -H -u 10001 gatus \
  && mkdir -p /config /data && chown gatus:gatus /config /data
